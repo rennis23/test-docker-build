@@ -10,10 +10,7 @@ USER node
 
 COPY --chown=node:node . .
 
-RUN ls -al \
-    && pwd \
-    && whoami \
-    && npm ci --only=production
+RUN npm ci --only=production
 
 EXPOSE 8080
 
